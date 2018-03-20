@@ -13,6 +13,7 @@
 		75781C8C20613095002DDE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75781C8B20613095002DDE48 /* Assets.xcassets */; };
 		75781C8F20613095002DDE48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75781C8D20613095002DDE48 /* LaunchScreen.storyboard */; };
 		75781C9220613095002DDE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9120613095002DDE48 /* main.m */; };
+		75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9920613BFF002DDE48 /* BNRItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		75781C8E20613095002DDE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75781C9020613095002DDE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75781C9120613095002DDE48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75781C9820613BFF002DDE48 /* BNRItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
+		75781C9920613BFF002DDE48 /* BNRItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				75781C8220613095002DDE48 /* AppDelegate.h */,
 				75781C8320613095002DDE48 /* AppDelegate.m */,
+				75781C9820613BFF002DDE48 /* BNRItemsViewController.h */,
+				75781C9920613BFF002DDE48 /* BNRItemsViewController.m */,
 				75781C8520613095002DDE48 /* ViewController.h */,
 				75781C8620613095002DDE48 /* ViewController.m */,
 				75781C8820613095002DDE48 /* Main.storyboard */,
@@ -144,6 +149,7 @@
 			files = (
 				75781C8720613095002DDE48 /* ViewController.m in Sources */,
 				75781C9220613095002DDE48 /* main.m in Sources */,
+				75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */,
 				75781C8420613095002DDE48 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
