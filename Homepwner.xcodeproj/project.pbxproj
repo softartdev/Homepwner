@@ -12,6 +12,7 @@
 		75781C8C20613095002DDE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75781C8B20613095002DDE48 /* Assets.xcassets */; };
 		75781C9220613095002DDE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9120613095002DDE48 /* main.m */; };
 		75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9920613BFF002DDE48 /* BNRItemsViewController.m */; };
+		75781C9D2061490A002DDE48 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9C2061490A002DDE48 /* BNRItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		75781C9120613095002DDE48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75781C9820613BFF002DDE48 /* BNRItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
 		75781C9920613BFF002DDE48 /* BNRItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
+		75781C9B2061490A002DDE48 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		75781C9C2061490A002DDE48 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 			children = (
 				75781C8220613095002DDE48 /* AppDelegate.h */,
 				75781C8320613095002DDE48 /* AppDelegate.m */,
+				75781C9B2061490A002DDE48 /* BNRItem.h */,
+				75781C9C2061490A002DDE48 /* BNRItem.m */,
 				75781C9820613BFF002DDE48 /* BNRItemsViewController.h */,
 				75781C9920613BFF002DDE48 /* BNRItemsViewController.m */,
 				75781C8520613095002DDE48 /* ViewController.h */,
@@ -141,6 +146,7 @@
 			files = (
 				75781C8720613095002DDE48 /* ViewController.m in Sources */,
 				75781C9220613095002DDE48 /* main.m in Sources */,
+				75781C9D2061490A002DDE48 /* BNRItem.m in Sources */,
 				75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */,
 				75781C8420613095002DDE48 /* AppDelegate.m in Sources */,
 			);
