@@ -14,6 +14,7 @@
 		75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9920613BFF002DDE48 /* BNRItemsViewController.m */; };
 		75781C9D2061490A002DDE48 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9C2061490A002DDE48 /* BNRItem.m */; };
 		75781CA02062300D002DDE48 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9F2062300D002DDE48 /* BNRItemStore.m */; };
+		75781CA220625F8B002DDE48 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75781CA120625F8B002DDE48 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		75781C9C2061490A002DDE48 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		75781C9E2062300D002DDE48 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		75781C9F2062300D002DDE48 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		75781CA120625F8B002DDE48 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				75781C9F2062300D002DDE48 /* BNRItemStore.m */,
 				75781C9820613BFF002DDE48 /* BNRItemsViewController.h */,
 				75781C9920613BFF002DDE48 /* BNRItemsViewController.m */,
+				75781CA120625F8B002DDE48 /* HeaderView.xib */,
 				75781C8520613095002DDE48 /* ViewController.h */,
 				75781C8620613095002DDE48 /* ViewController.m */,
 				75781C8B20613095002DDE48 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75781C8C20613095002DDE48 /* Assets.xcassets in Resources */,
+				75781CA220625F8B002DDE48 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,10 +276,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7L7R3VNZ4;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.datakrat.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -286,10 +291,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H7L7R3VNZ4;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.datakrat.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

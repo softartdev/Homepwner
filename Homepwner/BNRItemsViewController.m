@@ -10,15 +10,19 @@
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 
+@interface BNRItemsViewController ()
+
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+
+@end
+
 @implementation BNRItemsViewController
 
 - (instancetype)init
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[BNRItemStore sharedStore] createItem];
-        }
+        
     }
     return self;
 }
@@ -33,6 +37,17 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    
+    UIView *header = self.headerView;
+    [self.tableView setTableHeaderView:header];
+}
+
+- (UIView *)headerView
+{
+    if (!_headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    return _headerView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -49,6 +64,26 @@
     
     cell.textLabel.text = [item description];
     return cell;
+}
+
+- (IBAction)addNewItem:(id)sender
+{
+    BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
+    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (IBAction)toggleEditingMoge:(id)sender
+{
+    if (self.isEditing) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
 }
 
 @end
