@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		75781C8420613095002DDE48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C8320613095002DDE48 /* AppDelegate.m */; };
-		75781C8720613095002DDE48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C8620613095002DDE48 /* ViewController.m */; };
 		75781C8C20613095002DDE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75781C8B20613095002DDE48 /* Assets.xcassets */; };
 		75781C9220613095002DDE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9120613095002DDE48 /* main.m */; };
 		75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9920613BFF002DDE48 /* BNRItemsViewController.m */; };
@@ -21,8 +20,6 @@
 		75781C7F20613095002DDE48 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75781C8220613095002DDE48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75781C8320613095002DDE48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		75781C8520613095002DDE48 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75781C8620613095002DDE48 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		75781C8B20613095002DDE48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75781C9020613095002DDE48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75781C9120613095002DDE48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,8 +71,6 @@
 				75781C9820613BFF002DDE48 /* BNRItemsViewController.h */,
 				75781C9920613BFF002DDE48 /* BNRItemsViewController.m */,
 				75781CA120625F8B002DDE48 /* HeaderView.xib */,
-				75781C8520613095002DDE48 /* ViewController.h */,
-				75781C8620613095002DDE48 /* ViewController.m */,
 				75781C8B20613095002DDE48 /* Assets.xcassets */,
 				75781C9020613095002DDE48 /* Info.plist */,
 				75781C9120613095002DDE48 /* main.m */,
@@ -153,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75781C8720613095002DDE48 /* ViewController.m in Sources */,
 				75781C9220613095002DDE48 /* main.m in Sources */,
 				75781C9D2061490A002DDE48 /* BNRItem.m in Sources */,
 				75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */,
