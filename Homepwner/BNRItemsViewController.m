@@ -9,6 +9,7 @@
 #import "BNRItemsViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
+#import "BNRDetailViewController.h"
 
 @interface BNRItemsViewController ()
 
@@ -100,6 +101,12 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
