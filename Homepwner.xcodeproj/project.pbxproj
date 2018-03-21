@@ -13,6 +13,7 @@
 		75781C9220613095002DDE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9120613095002DDE48 /* main.m */; };
 		75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9920613BFF002DDE48 /* BNRItemsViewController.m */; };
 		75781C9D2061490A002DDE48 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9C2061490A002DDE48 /* BNRItem.m */; };
+		75781CA02062300D002DDE48 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781C9F2062300D002DDE48 /* BNRItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		75781C9920613BFF002DDE48 /* BNRItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
 		75781C9B2061490A002DDE48 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		75781C9C2061490A002DDE48 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		75781C9E2062300D002DDE48 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		75781C9F2062300D002DDE48 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				75781C8320613095002DDE48 /* AppDelegate.m */,
 				75781C9B2061490A002DDE48 /* BNRItem.h */,
 				75781C9C2061490A002DDE48 /* BNRItem.m */,
+				75781C9E2062300D002DDE48 /* BNRItemStore.h */,
+				75781C9F2062300D002DDE48 /* BNRItemStore.m */,
 				75781C9820613BFF002DDE48 /* BNRItemsViewController.h */,
 				75781C9920613BFF002DDE48 /* BNRItemsViewController.m */,
 				75781C8520613095002DDE48 /* ViewController.h */,
@@ -149,6 +154,7 @@
 				75781C9D2061490A002DDE48 /* BNRItem.m in Sources */,
 				75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */,
 				75781C8420613095002DDE48 /* AppDelegate.m in Sources */,
+				75781CA02062300D002DDE48 /* BNRItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
