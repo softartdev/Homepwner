@@ -1,14 +1,14 @@
 //
 //  BNRImageStore.m
-//  Homepwner
+//  HomePwner
 //
-//  Created by Артур on 30.03.2018.
-//  Copyright © 2018 DataKrat. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import "BNRImageStore.h"
 
-@interface BNRImageStore()
+@interface BNRImageStore ()
 
 @property (nonatomic, strong) NSMutableDictionary *dictionary;
 
@@ -16,27 +16,36 @@
 
 @implementation BNRImageStore
 
-+ (instancetype)sharedSore
++ (instancetype)sharedStore
 {
-    static BNRImageStore *sharedStore = nil;
-    if (!sharedStore) {
+    static BNRImageStore *sharedStore;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         sharedStore = [[self alloc] initPrivate];
-    }
+    });
+
     return sharedStore;
 }
 
-- (instancetype) init
+// No one should call init
+- (instancetype)init
 {
-    @throw [NSException exceptionWithName:@"Singleton" reason:@"Use +[BNRItemStore SharedStore]" userInfo:nil];
+    @throw [NSException exceptionWithName:@"Singleton"
+                                   reason:@"Use +[BNRImageStore sharedStore]"
+                                 userInfo:nil];
     return nil;
 }
 
+// Secret designated initializer
 - (instancetype)initPrivate
 {
     self = [super init];
+
     if (self) {
         _dictionary = [[NSMutableDictionary alloc] init];
     }
+
     return self;
 }
 

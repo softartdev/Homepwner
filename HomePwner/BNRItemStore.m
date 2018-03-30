@@ -1,9 +1,9 @@
 //
 //  BNRItemStore.m
-//  Homepwner
+//  HomePwner
 //
-//  Created by Артур on 21.03.2018.
-//  Copyright © 2018 DataKrat. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import "BNRItemStore.h"
@@ -20,21 +20,27 @@
 
 + (instancetype)sharedStore
 {
-    static BNRItemStore *sharedStore = nil;
-    
+    static BNRItemStore *sharedStore;
+
+    // Do I need to create a sharedStore?
     if (!sharedStore) {
         sharedStore = [[self alloc] initPrivate];
     }
-    
+
     return sharedStore;
 }
 
+// If a programmer calls [[BNRItemStore alloc] init], let him
+// know the error of his ways
 - (instancetype)init
 {
-    @throw [NSException exceptionWithName:@"Singleton" reason:@"Use +[BNRItemStore sharedStore]" userInfo:nil];
+    @throw [NSException exceptionWithName:@"Singleton"
+                                   reason:@"Use +[BNRItemStore sharedStore]"
+                                 userInfo:nil];
     return nil;
 }
 
+// Here is the real (secret) initializer
 - (instancetype)initPrivate
 {
     self = [super init];
@@ -46,33 +52,41 @@
 
 - (NSArray *)allItems
 {
-    return self.privateItems;
+    return [self.privateItems copy];
 }
 
 - (BNRItem *)createItem
 {
     BNRItem *item = [BNRItem randomItem];
-    
+
     [self.privateItems addObject:item];
-    
+
     return item;
 }
 
 - (void)removeItem:(BNRItem *)item
 {
-    NSString *key = item.imageKey;
-    [[BNRImageStore sharedSore] deleteImageForKey:key];
-    
+    NSString *key = item.itemKey;
+    if (key) {
+        [[BNRImageStore sharedStore] deleteImageForKey:key];
+    }
+
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
-- (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
+- (void)moveItemAtIndex:(NSInteger)fromIndex
+                toIndex:(NSInteger)toIndex
 {
     if (fromIndex == toIndex) {
         return;
     }
+    // Get pointer to object being moved so you can re-insert it
     BNRItem *item = self.privateItems[fromIndex];
+
+    // Remove item from array
     [self.privateItems removeObjectAtIndex:fromIndex];
+
+    // Insert item in array at new location
     [self.privateItems insertObject:item atIndex:toIndex];
 }
 

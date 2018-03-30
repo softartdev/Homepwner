@@ -1,9 +1,9 @@
 //
 //  BNRItemsViewController.h
-//  Homepwner
+//  HomePwner
 //
-//  Created by Артур on 20.03.2018.
-//  Copyright © 2018 DataKrat. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
