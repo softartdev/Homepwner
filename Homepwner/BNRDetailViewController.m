@@ -7,6 +7,7 @@
 //
 
 #import "BNRDetailViewController.h"
+#import "BNRItem.h"
 
 @interface BNRDetailViewController ()
 
@@ -19,6 +20,24 @@
 
 @implementation BNRDetailViewController
 
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    BNRItem *item = self.item;
+    
+    self.nameField.text = item.itemName;
+    self.serialNumberField.text = item.serialNumber;
+    self.valueField.text = [NSString stringWithFormat:@"%d", item.valueInDollars];
+    
+    static NSDateFormatter *dateFormatter = nil;
+    if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        dateFormatter.timeStyle = NSDateFormatterNoStyle;
+    }
+    
+    self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+}
 
 @end
