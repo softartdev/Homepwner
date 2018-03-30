@@ -16,6 +16,7 @@
 		75781CA220625F8B002DDE48 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75781CA120625F8B002DDE48 /* HeaderView.xib */; };
 		75781CA620628AC3002DDE48 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75781CA420628AC3002DDE48 /* BNRDetailViewController.m */; };
 		75781CA720628AC3002DDE48 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75781CA520628AC3002DDE48 /* BNRDetailViewController.xib */; };
+		75998C27206E4B930008F82F /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75998C26206E4B930008F82F /* BNRImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		75781CA320628AC3002DDE48 /* BNRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
 		75781CA420628AC3002DDE48 /* BNRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
 		75781CA520628AC3002DDE48 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		75998C25206E4B930008F82F /* BNRImageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		75998C26206E4B930008F82F /* BNRImageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				75781CA320628AC3002DDE48 /* BNRDetailViewController.h */,
 				75781CA420628AC3002DDE48 /* BNRDetailViewController.m */,
 				75781CA520628AC3002DDE48 /* BNRDetailViewController.xib */,
+				75998C25206E4B930008F82F /* BNRImageStore.h */,
+				75998C26206E4B930008F82F /* BNRImageStore.m */,
 				75781C8B20613095002DDE48 /* Assets.xcassets */,
 				75781C9020613095002DDE48 /* Info.plist */,
 				75781C9120613095002DDE48 /* main.m */,
@@ -158,6 +163,7 @@
 			files = (
 				75781CA620628AC3002DDE48 /* BNRDetailViewController.m in Sources */,
 				75781C9220613095002DDE48 /* main.m in Sources */,
+				75998C27206E4B930008F82F /* BNRImageStore.m in Sources */,
 				75781C9D2061490A002DDE48 /* BNRItem.m in Sources */,
 				75781C9A20613BFF002DDE48 /* BNRItemsViewController.m in Sources */,
 				75781C8420613095002DDE48 /* AppDelegate.m in Sources */,

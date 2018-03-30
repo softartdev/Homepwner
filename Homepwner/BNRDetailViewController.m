@@ -8,6 +8,7 @@
 
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -28,9 +29,9 @@
     self.navigationItem.title = _item.itemName;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     BNRItem *item = self.item;
     
@@ -44,8 +45,11 @@
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
     }
-    
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    
+    NSString *imageKey = self.item.imageKey;
+    UIImage *imageToDisplay = [[BNRImageStore sharedSore] imageForKey:imageKey];
+    self.imageView.image = imageToDisplay;
 }
 
 - (IBAction)takePictuce:(id)sender
@@ -63,6 +67,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    [[BNRImageStore sharedSore] setImage:image forKey:self.item.imageKey];
+    
     self.imageView.image = image;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
