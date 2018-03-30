@@ -20,6 +20,12 @@
 
 @implementation BNRDetailViewController
 
+- (void)setItem:(BNRItem *)item
+{
+    _item = item;
+    self.navigationItem.title = _item.itemName;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
